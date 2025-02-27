@@ -247,59 +247,13 @@ void generate1Dplot()
     
     vector<string> filetag=  {"Sample size:112K"};
 MixedData varName[] = { // { Name of the plot , xLabel , rebin , ymin , ymax , xmin , xmax , Legend label }
-{"M_gen","Mass (GeV)",10,0,2000,0,2.1,"mass of A"},  
-{"A_gen_pT","pT (GeV)",10,1,2000,0,120,"Gen pT of A"},
-{"A_gen_eta","#eta",10,0,2000,-3,3,"Gen #eta of A"},  
-{"A_gen_phi","#phi",10,0,2000,-4,4,"Gen #phi of A"},
-{"A_gen_energy","Energy (GeV)",10,0,200,0,1000,"Gen energy of A"},
-{"Lorentz boost of A","Lorentz boost (#gamma)",10,0,200,1,7000,"Lorentz boost of A"},
-{"No. of gen photons","No. of photons",10,0,200,0,4,"No. of gen photons"},
-{"Photon1 gen eta","#eta",10,0,200,-3,3,"Pho1 gen #eta"},
-{"Photon1 gen phi","#phi",10,0,200,-4,4,"Pho1 gen #phi"},
-{"Photon1 gen pT","pT (GeV)",10,0,200,0,150,"Pho1 gen pT"},
-{"Photon1 gen E","Energy (GeV)", 10,0,200,0,1000,"Pho1 gen energy"},
-{"Photon2 gen eta","#eta",10,0,200,-3,3,"Pho2 gen #eta"},
-{"Photon2 gen phi","#phi",10,0,200,-4,4,"Pho2 gen #phi"},
-{"Photon2 gen E","energy (GeV)",10,0,200,0,1000,"Pho2 gen energy"},
-{"E_sublead_by_E_lead","ratio",10,0,200,0,1.2,"E_sublead/E_lead"},
-{"No. of reco photons","No. of photons",10,0,200,0,4,"No. of reco photons"},
-{"Photon1 EE rechit eta","#eta",10,0,200,-3,3,"Pho1 EE rechit #eta"},
-{"Pho1_hit_phi","#phi",10,0,200,-4,4,"Pho1 EE rechit #phi"},
-{"Photon2 EE rechit eta","#eta",10,0,200,-4,4,"Pho2 EE rechit #eta"},
-{"Pho2_hit_phi","#phi",10,0,200,-4,4,"Pho2 EE rechit #phi"},
-{"Pho1_hit_X","ECAL X (in cm)",10,0,200,-160,160,"Pho1 EE rechit x"},
-{"Pho1_hit_Y","ECAL Y (in cm)",10,0,200,-160,160,"Pho1 EE rechit y"},
-{"Pho1_hit_Z","ECAL Z (in cm)",10,0,200,250,350,"Pho1 EE rechit z"},
-{"Pho1_hit_E","Energy (GeV)",10,0,200,0,50,"Pho1 EE rechit enrgy"},
-{"Pho2_hit_X","ECAL X (in cm)", 10,0,200,-160,160,"Pho2 EE rechit x"},
-{"Pho2_hit_Y","ECAL Y (in cm)",10,0,200,-160,160,"Pho2 EE rechit y"},
-{"Pho2_hit_Z","ECAL Z (in cm)",10,0,200,250,350,"Pho2 EE rechit z"},
-{"Pho2_hit_E","Energy (GeV)",10,0,200,0,50,"Pho2 EE rechit enrgy"},
-
-{"Pho1_ES_hit_eta","#eta",10,0,200,-3,3,"Pho1 ES rechit #eta"},
-{"Pho1_ES_hit_phi","#phi",10,0,200,-4,4,"Pho1 ES rechit #phi"},
-{"Pho2_ES_hit_eta","#eta",10,0,200,-3,3,"Pho2 ES rechit #eta"},
-{"Pho2_ES_hit_phi","#phi",10,0,200,-4,4,"Pho2 ES rechit #phi"},
-{"Pho1_ES_hit_X", "X (in cm)",10,0,200,-160,160,"Pho1 ES rechit X"},
-{"Pho1_ES_hit_Y", "Y (in cm)",10,0,200,-160  , 160, "Pho1 ES rechit Y"},
-{"Pho1_ES_hit_Z", "Z (in cm)",10,0,200,250,350,"Pho1 ES rechit Z"},
-{"Pho1_ES_hit_E","Energy (GeV)",10,0,200,0,0.2,"Pho1 ES rechit energy"},
-{"Pho2_ES_hit_X", "X (in cm)",10,0,200,-160,160,"Pho2 ES rechit X"},
-{"Pho2_ES_hit_Y", "Y (in cm)",10,0,200,-160  , 160, "Pho2 ES rechit Y"},
-{"Pho2_ES_hit_Z", "Z (in cm)",10,0,200,250,350,"Pho2 ES rechit Z"},
-{"Pho2_ES_hit_E","Energy (GeV)",10,0,200,0,0.2,"Pho2 ES rechit energy"},
-
-{"Pho_sig_iEiE_Ma_200_300","#sigmai_{i#eta i#eta}",10,0,200,0,0.1,"#sigmai_{i#eta i#eta}"},
-{"Pho_sig_iPhiiPhi" ,"#sigma_{i#phi i#phi}",10,0,200,0,0.1,"#sigma_{i#phi i#phi}"},
-
+{"Ratio plot for BDT","E_corr/E_gen",1,0,17,0.5,1.5,"BDT"} ,
+{"Ratio plot for DRN","E_corr/E_gen",1,0,17,0.5,1.5,"DRN"} ,
 
 };
 
 
-  vector<string>GEN ={"M_gen","A_gen_pT","A_gen_eta","A_gen_phi","A_gen_energy","Lorentz boost of A","No. of gen photons","Photon1 gen eta","Photon1 gen phi","Photon1 gen pT","Photon1 gen E",
-   "Photon2 gen eta","Photon2 gen phi","Photon2 gen pT","Photon2 gen E","E_sublead_by_E_lead","E_pho2_by_E_pho1"}  ; 
-                  
-  vector<string> loghist  ={"Lorentz boost of A","E_pho2_by_E_pho1","Pho1_hit_E","Pho2_hit_E","Pho1_ES_hit_E","Pho2_ES_hit_E"} ;                                                                                                              
+  // vector<string>GEN ={"M_gen","A_gen_pT","A_gen_eta"}  ;                                                                                                               
 
 
   bool flag=false;

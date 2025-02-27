@@ -284,7 +284,7 @@ TBranch        *b_RecHitFlag_kESTS2Saturated_ele2;   //!
 TBranch        *b_RecHitFlag_kESTS3Saturated_ele2;   //!
 TBranch        *b_RecHitFlag_kESTS13Sigmas_ele2;   //!
 TBranch        *b_RecHitFlag_kESTS15Sigmas_ele2;   //!
-TBranch        *b_nEle;   //!
+TBranch        *b_nElectrons;   //!
 TBranch        *b_pt;   //!
 TBranch        *b_eta;   //!
 TBranch        *b_phi;   //!
@@ -493,7 +493,7 @@ fChain->SetBranchAddress("iEtaEle1", &iEtaEle1, &b_iEtaEle1);
    fChain->SetBranchAddress("iPhiEle1", &iPhiEle1, &b_iPhiEle1);
    fChain->SetBranchAddress("Hit_ES_Eta_Ele1", &Hit_ES_Eta_Ele1, &b_Hit_ES_Eta_Ele1);
    fChain->SetBranchAddress("Hit_ES_Phi_Ele1", &Hit_ES_Phi_Ele1, &b_Hit_ES_Phi_Ele1);
-   fChain->SetBranchAddress("Hit_ES_X_Ele1", &Hit_ES_X_Ele1, &Hit_ES_X_Ele1);
+   fChain->SetBranchAddress("Hit_ES_X_Ele1", &Hit_ES_X_Ele1, &b_Hit_ES_X_Ele1);
    fChain->SetBranchAddress("Hit_ES_Y_Ele1", &Hit_ES_Y_Ele1, &b_Hit_ES_Y_Ele1);
    fChain->SetBranchAddress("Hit_ES_Z_Ele1", &Hit_ES_Z_Ele1, &b_Hit_ES_Z_Ele1);
    fChain->SetBranchAddress("ES_RecHitEnEle1", &ES_RecHitEnEle1, &b_ES_RecHitEnEle1);
@@ -502,11 +502,11 @@ fChain->SetBranchAddress("iEtaEle1", &iEtaEle1, &b_iEtaEle1);
    fChain->SetBranchAddress("Hit_X_Ele1", &Hit_X_Ele1, &b_Hit_X_Ele1);
    fChain->SetBranchAddress("Hit_Y_Ele1", &Hit_Y_Ele1, &b_Hit_Y_Ele1);
    fChain->SetBranchAddress("Hit_Z_Ele1", &Hit_Z_Ele1, &b_Hit_Z_Ele1);
-   fChain->SetBranchAddress("RecHitEnPho1", &RecHitEnEle1, &b_RecHitEnEle1);
-   fChain->SetBranchAddress("RecHitFracPho1", &RecHitFracEle1, &b_RecHitFracEle1);
+   fChain->SetBranchAddress("RecHitEnEle1", &RecHitEnEle1, &b_RecHitEnEle1);
+   fChain->SetBranchAddress("RecHitFracEle1", &RecHitFracEle1, &b_RecHitFracEle1);
    fChain->SetBranchAddress("RecHitGain1", &RecHitGain1, &b_RecHitGain1);
    fChain->SetBranchAddress("RecHitQuality1", &RecHitQuality1, &b_RecHitQuality1);
-   fChain->SetBranchAddress("RecHitFlag_kGood_Ele1", &RecHitFlag_kGood_ele1, &b_RecHitFlag_kGood_ele1);
+   fChain->SetBranchAddress("RecHitFlag_kGood_ele1", &RecHitFlag_kGood_ele1, &b_RecHitFlag_kGood_ele1);
    fChain->SetBranchAddress("RecHitFlag_kPoorReco_ele1", &RecHitFlag_kPoorReco_ele1, &b_RecHitFlag_kPoorReco_ele1);
    fChain->SetBranchAddress("RecHitFlag_kOutOfTime_ele1", &RecHitFlag_kOutOfTime_ele1, &b_RecHitFlag_kOutOfTime_ele1);
    fChain->SetBranchAddress("RecHitFlag_kFaultyHardware_ele1", &RecHitFlag_kFaultyHardware_ele1, &b_RecHitFlag_kFaultyHardware_ele1);
@@ -527,7 +527,7 @@ fChain->SetBranchAddress("iEtaEle1", &iEtaEle1, &b_iEtaEle1);
    fChain->SetBranchAddress("RecHitFlag_kESGood_ele1", &RecHitFlag_kESGood_ele1, &b_RecHitFlag_kESGood_ele1);
    fChain->SetBranchAddress("RecHitFlag_kESDead_ele1", &RecHitFlag_kESDead_ele1, &b_RecHitFlag_kESDead_ele1);
    fChain->SetBranchAddress("RecHitFlag_kESHot_ele1", &RecHitFlag_kESHot_ele1, &b_RecHitFlag_kESHot_ele1);
-   fChain->SetBranchAddress("RecHitFlag_kESPassBX_pho1", &RecHitFlag_kESPassBX_ele1, &b_RecHitFlag_kESPassBX_ele1);
+   fChain->SetBranchAddress("RecHitFlag_kESPassBX_ele1", &RecHitFlag_kESPassBX_ele1, &b_RecHitFlag_kESPassBX_ele1);
    fChain->SetBranchAddress("RecHitFlag_kESTwoGoodRatios_ele1", &RecHitFlag_kESTwoGoodRatios_ele1, &b_RecHitFlag_kESTwoGoodRatios_ele1);
    fChain->SetBranchAddress("RecHitFlag_kESBadRatioFor12_ele1", &RecHitFlag_kESBadRatioFor12_ele1, &b_RecHitFlag_kESBadRatioFor12_ele1);
    fChain->SetBranchAddress("RecHitFlag_kESBadRatioFor23Upper_ele1", &RecHitFlag_kESBadRatioFor23Upper_ele1, &b_RecHitFlag_kESBadRatioFor23Upper_ele1);
@@ -544,7 +544,7 @@ fChain->SetBranchAddress("iEtaEle1", &iEtaEle1, &b_iEtaEle1);
    fChain->SetBranchAddress("iPhiEle2", &iPhiEle2, &b_iPhiEle2);
    fChain->SetBranchAddress("Hit_ES_Eta_Ele2", &Hit_ES_Eta_Ele2, &b_Hit_ES_Eta_Ele2);
    fChain->SetBranchAddress("Hit_ES_Phi_Ele2", &Hit_ES_Phi_Ele2, &b_Hit_ES_Phi_Ele2);
-   fChain->SetBranchAddress("Hit_ES_X_Ele2", &Hit_ES_X_Ele2, &Hit_ES_X_Ele2);
+   fChain->SetBranchAddress("Hit_ES_X_Ele2", &Hit_ES_X_Ele2, &b_Hit_ES_X_Ele2);
    fChain->SetBranchAddress("Hit_ES_Y_Ele2", &Hit_ES_Y_Ele2, &b_Hit_ES_Y_Ele2);
    fChain->SetBranchAddress("Hit_ES_Z_Ele2", &Hit_ES_Z_Ele2, &b_Hit_ES_Z_Ele2);
    fChain->SetBranchAddress("ES_RecHitEnEle2", &ES_RecHitEnEle2, &b_ES_RecHitEnEle2);
@@ -553,11 +553,11 @@ fChain->SetBranchAddress("iEtaEle1", &iEtaEle1, &b_iEtaEle1);
    fChain->SetBranchAddress("Hit_X_Ele2", &Hit_X_Ele2, &b_Hit_X_Ele2);
    fChain->SetBranchAddress("Hit_Y_Ele2", &Hit_Y_Ele2, &b_Hit_Y_Ele2);
    fChain->SetBranchAddress("Hit_Z_Ele2", &Hit_Z_Ele2, &b_Hit_Z_Ele2);
-   fChain->SetBranchAddress("RecHitEnPho2", &RecHitEnEle2, &b_RecHitEnEle2);
-   fChain->SetBranchAddress("RecHitFracPho2", &RecHitFracEle2, &b_RecHitFracEle2);
+   fChain->SetBranchAddress("RecHitEnEle2", &RecHitEnEle2, &b_RecHitEnEle2);
+   fChain->SetBranchAddress("RecHitFracEle2", &RecHitFracEle2, &b_RecHitFracEle2);
    fChain->SetBranchAddress("RecHitGain2", &RecHitGain2, &b_RecHitGain2);
    fChain->SetBranchAddress("RecHitQuality2", &RecHitQuality2, &b_RecHitQuality2);
-   fChain->SetBranchAddress("RecHitFlag_kGood_Ele2", &RecHitFlag_kGood_ele2, &b_RecHitFlag_kGood_ele2);
+   fChain->SetBranchAddress("RecHitFlag_kGood_ele2", &RecHitFlag_kGood_ele2, &b_RecHitFlag_kGood_ele2);
    fChain->SetBranchAddress("RecHitFlag_kPoorReco_ele2", &RecHitFlag_kPoorReco_ele2, &b_RecHitFlag_kPoorReco_ele2);
    fChain->SetBranchAddress("RecHitFlag_kOutOfTime_ele2", &RecHitFlag_kOutOfTime_ele2, &b_RecHitFlag_kOutOfTime_ele2);
    fChain->SetBranchAddress("RecHitFlag_kFaultyHardware_ele2", &RecHitFlag_kFaultyHardware_ele2, &b_RecHitFlag_kFaultyHardware_ele2);
@@ -591,7 +591,7 @@ fChain->SetBranchAddress("iEtaEle1", &iEtaEle1, &b_iEtaEle1);
    fChain->SetBranchAddress("RecHitFlag_kESTS3Saturated_ele2", &RecHitFlag_kESTS3Saturated_ele2, &b_RecHitFlag_kESTS3Saturated_ele2);
    fChain->SetBranchAddress("RecHitFlag_kESTS13Sigmas_ele2", &RecHitFlag_kESTS13Sigmas_ele2, &b_RecHitFlag_kESTS13Sigmas_ele2);
    fChain->SetBranchAddress("RecHitFlag_kESTS15Sigmas_ele2", &RecHitFlag_kESTS15Sigmas_ele2, &b_RecHitFlag_kESTS15Sigmas_ele2);
-   fChain->SetBranchAddress("nEle", &nElectrons, &b_nEle);
+   fChain->SetBranchAddress("nElectrons", &nElectrons, &b_nElectrons);
   //  fChain->SetBranchAddress("A_flags", &A_flags, &b_A_flags);
    fChain->SetBranchAddress("pt", &pt, &b_pt);
    fChain->SetBranchAddress("eta", &eta, &b_eta);
